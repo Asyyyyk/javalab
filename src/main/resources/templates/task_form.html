@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Task</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+  <h1>Add New Task</h1>
+  <a href="/tasks/all">Back to Task List</a>
+</header>
+
+<main>
+  <form action="/tasks/add" method="post">
+    <label for="title">Task Title</label>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <input type="text" id="title" name="title" required>
+
+    <label for="category">Category</label>
+    <select id="category" name="category" required>
+      <!-- Categories should be dynamically populated from the backend -->
+      <option value="1">Work</option>
+      <option value="2">Personal</option>
+    </select>
+
+    <label for="status">Status</label>
+    <select id="status" name="status" required>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <label for="dueDate">Due Date</label>
+    <input type="date" id="dueDate" name="dueDate" required>
+
+    <button type="submit">Save Task</button>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* General resets and body styling */
+/* Сброс отступов и боксов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Базовые стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    /* Добавим центральный контейнер для контента */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #1565C0;
+    color: white;
+    padding: 30px 0; /* Увеличим паддинг для более "воздушного" вида */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Чуть крупнее заголовок */
+}
+
+/* Ссылки в header, навигации и т.д. */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Навигация (если используется) */
+nav {
+    text-align: center;
+    margin: 30px 0; /* Больше отступ сверху и снизу */
+}
+
+nav a {
+    background-color: #1565C0;
+    color: white;
+    padding: 10px 20px; /* Увеличим размер кнопок в навигации */
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 1.1rem; /* Чуть крупнее текст */
+}
+
+nav a:hover {
+    background-color: #0D47A1;
+}
+
+nav a.active {
+    background-color: #1E88E5;
+}
+
+/* Кнопки */
+button, input[type="submit"] {
+    background-color: #1E88E5;
+    color: white;
+    border: none;
+    padding: 14px 28px; /* Сделаем кнопки побольше */
+    cursor: pointer;
+    font-size: 1.1rem; /* Крупнее шрифт на кнопках */
+    border-radius: 4px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0D47A1;
+}
+
+/* Таблицы */
+table {
+    width: 90%; /* Сделаем таблицы уже и центрируем их */
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem; /* Крупнее текст в таблицах */
+}
+
+th, td {
+    padding: 16px; /* Увеличим отступы внутри ячеек */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1565C0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ссылки внутри таблицы */
+td a {
+    color: #1565C0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Формы */
+form {
+    background-color: #ffffff;
+    padding: 30px; /* Больше отступов */
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Сузим форму для более аккуратного вида */
+    font-size: 1.1rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #1565C0;
+    outline: none;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pagination a {
+    background-color: #1565C0;
+    color: #fff;
+    padding: 10px 20px; /* Сделаем пагинацию более заметной */
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.pagination a:hover {
+    background-color: #0D47A1;
+}
+
+.pagination a.active {
+    background-color: #1E88E5;
+}
+
+/* Страница профиля пользователя */
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Побольше расстояние между фото и формой */
+    margin-bottom: 30px;
+}
+
+#user-photo {
+    width: 150px; /* Увеличим размер "иконки"/фото */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Footer (опционально, если нужен) */
+footer {
+    background-color: #1565C0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+
+
+
+

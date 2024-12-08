@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+  <h1>Task List</h1>
+  <a href="/tasks/add">Add New Task</a>
+  <form action="/tasks/search" method="get">
+    <input type="text" name="search" placeholder="Search tasks...">
+    <button type="submit">Search</button>
+  </form>
+</header>
+
+<main>
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Here, dynamic task data will be injected -->
+    <tr>
+      <td>Sample Task</td>
+      <td>Sample Category</td>
+      <td>2024-11-08</td>
+      <td>Pending</td>
+      <td>
+        <a href="/tasks/edit/1">Edit</a> |
+        <a href="/tasks/delete/1">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <nav class="pagination">
+    <a href="?page=1">1</a>
+    <a href="?page=2">2</a>
+    <!-- Pagination links go here -->
+  </nav>
+</main>
+</body>
+</html>
